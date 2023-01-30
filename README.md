@@ -11,7 +11,8 @@ Official implementation for "CP-VTON+: Clothing Shape and Texture Preserving Ima
 ## what's new 
 - I upgrade the project to new version of libraries.
 - code is tested on the new version of torch=1.13.1, torchvision=0.14.1 using with python 3.9 pip installation.
-- run only one file app.py for testing. it can automatically run both commands (GMM and TOM) and take care of copying files. (if you want to train first then change the test.py to train.py on line no. 6 and 14.)
+- run only one file app.py for testing/training. it can automatically run both commands (GMM and TOM) and take care of copying files. 
+if you want to train first then `Line 8 : subprocess.call(gmm_train, shell=True)`<br>`Line 17 :subprocess.call(gmm_train, shell=True)`
 - fix all the deprecated warning of torch and resolve all isuses regarding dependency.
 - have a dedicated branch for only-cpu version.
 
