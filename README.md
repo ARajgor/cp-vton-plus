@@ -1,4 +1,4 @@
-# CP-VTON+ (new 2023)
+# CP-VTON+ (Only CPU)
 
 ## Original Author
 credits to original author. A very exceptional work. here the details.<br>
@@ -9,6 +9,7 @@ Official implementation for "CP-VTON+: Clothing Shape and Texture Preserving Ima
 <br/>Dataset: [VITON_PLUS](https://1drv.ms/u/s!Ai8t8GAHdzVUiQQYX0azYhqIDPP6?e=4cpFTI)
 
 ## what's new 
+- **run on CPU**. revise the code from cuda to cpu.
 - I upgrade the project to new version of libraries.
 - code is tested on the new version of torch=1.13.1, torchvision=0.14.1 using with python 3.9 pip installation.
 - run only one file app.py for testing. it can automatically run both commands (GMM and TOM) and take care of copying files. (if you want to train first then change the test.py to train.py on line no. 6 and 14.)
