@@ -1,8 +1,8 @@
 # CP-VTON+ (new 2023)
 
 ## Original Author
-credits to original author. A very exceptional work. here the details.<br><br>
-visit orignial repo : https://github.com/minar09/cp-vton-plus <br><br> 
+credits to original author. A very exceptional work. here the details.<br>
+visit original repo : https://github.com/minar09/cp-vton-plus <br><br> 
 Official implementation for "CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On" from CVPRW 2020.
 <br/>Project page: https://minar09.github.io/cpvtonplus/. 
 <br/>Saved/Pre-trained models: [Checkpoints](https://1drv.ms/u/s!Ai8t8GAHdzVUiQA-o3C7cnrfGN6O?e=EaRiFP)
