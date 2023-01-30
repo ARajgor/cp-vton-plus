@@ -14,17 +14,20 @@ Official implementation for "CP-VTON+: Clothing Shape and Texture Preserving Ima
 - run only one file app.py that can automatically run both commands (GMM and TOM). It also take care of copy of files.
 - fix all the deprecated warning of torch and resolve all isuses regarding dependency.
 - have a dedicated branch for only-cpu version.
-	
-###Pre-trained Models and datasets
+
+if you find any problem feel free to raise issue.
+
+### Pre-trained Models and datasets
 
 download pre-trained models and dataset. copy the pre-trained models to checkpoints/ folder. copy the datasets to data/ folder.
 
 ### Installation
-
 run `pip install -r requirements.txt`
+
 ### How to run
 Run `python app.py` it will take care of both the operation GMM and TOM. you can customize as per your requirements. it also has copy functionality of files. if you want to run actual commands refer below steps.
-
+<br>
+for tensorboard run `tensorboard --logdir tensorboard`
 
 ### Testing with custom images
 

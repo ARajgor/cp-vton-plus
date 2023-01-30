@@ -82,7 +82,7 @@ def train_gmm(opt, train_loader, model, board):
         im_g = inputs['grid_image'].cuda()
 
         grid, theta = model(agnostic, cm)    # can be added c too for new training
-        warped_cloth = F.grid_sample(c, grid, padding_mode='border',align_corners=True)
+        warped_cloth = F.grid_sample(c, grid, padding_mode='border',align_corners=True)  # fix new version of torch add align_corners=True
         warped_mask = F.grid_sample(cm, grid, padding_mode='zeros',align_corners=True)
         warped_grid = F.grid_sample(im_g, grid, padding_mode='zeros',align_corners=True)
 
@@ -152,8 +152,8 @@ def train_tom(opt, train_loader, model, board):
         # outputs = model(torch.cat([agnostic, c], 1))  # CP-VTON
         outputs = model(torch.cat([agnostic, c, cm], 1))  # CP-VTON+
         p_rendered, m_composite = torch.split(outputs, 3, 1)
-        p_rendered = torch.tanh(p_rendered)
-        m_composite = torch.sigmoid(m_composite)
+        p_rendered = torch.tanh(p_rendered)   # fix torch.nn.functional.tanh depercated
+        m_composite = torch.sigmoid(m_composite) # fix torch.nn.functional.sigmoid depercated
         p_tryon = c * m_composite + p_rendered * (1 - m_composite)
 
         """visuals = [[im_h, shape, im_pose],

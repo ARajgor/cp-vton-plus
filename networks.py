@@ -132,7 +132,7 @@ class FeatureRegression(nn.Module):
 
     def forward(self, x):
         x = self.conv(x)
-        x = x.reshape(x.size(0), -1)
+        x = x.reshape(x.size(0), -1)  # fix x.view -> x.reshape
         x = self.linear(x)
         x = self.tanh(x)
         return x

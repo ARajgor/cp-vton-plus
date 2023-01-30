@@ -29,7 +29,7 @@ class CPDataset(data.Dataset):
         self.data_path = osp.join(opt.dataroot, opt.datamode)
         self.transform = transforms.Compose([
             transforms.ToTensor(),
-            transforms.Normalize((0.5,), (0.5,))])
+            transforms.Normalize((0.5,), (0.5,))])  # fix new version of torch (0.5,0.5,0.5) -> (0.5,)
 
         # load data list
         im_names = []
