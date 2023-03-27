@@ -1,7 +1,15 @@
 # CP-VTON+ (new 2023)
 
 ## Original Author
-Minar, M. R., & Thai, T. T. Official implementation for "CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On" from CVPRW 2020. [Computer software]. https://github.com/minar09/cp-vton-plus
+```
+@InProceedings{Minar_CPP_2020_CVPR_Workshops,
+	title={CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On},
+	author={Minar, Matiur Rahman and Thai Thanh Tuan and Ahn, Heejune and Rosin, Paul and Lai, Yu-Kun},
+	booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+	month = {June},
+	year = {2020}
+}
+```
 
 credits to original author. A very exceptional work. here the details.<br>
 visit original repo : https://github.com/minar09/cp-vton-plus <br><br> 
