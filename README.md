@@ -29,23 +29,23 @@ if you want to train first then `Line 8 : subprocess.call(gmm_train, shell=True)
 if you find any problem feel free to raise issue.
 
 
-### Installation and Run
+## Installation and Run
 
 run `pip install -r requirements.txt`
 
-#### AutoRun
+### AutoRun
 Run `python app.py` it will take care of both the operation GMM and TOM. you can customize as per your requirements. it also has copy functionality of files. if you want to run actual commands refer below steps.
 <br>
 for tensorboard run `tensorboard --logdir tensorboard`
 
-#### Training
+### Training
 Run `python train.py` with your specific usage options for GMM and TOM stage. \
 example GMM: `python train.py --name GMM --stage GMM --workers 4 --save_count 5000 --shuffle`
 
 Then run `test.py` for GMM network with the training dataset, which will generate the warped clothes and masks in "warp-cloth" and "warp-mask" folders inside the "result/GMM/train/" directory. Copy the "warp-cloth" and "warp-mask" folders into your data directory, for example inside "data/train" folder.\
 example TOM: `python train.py --name TOM --stage TOM --workers 4 --save_count 5000 --shuffle`
 
-#### Testing
+### Testing
 Run `python test.py` with your specific usage options.\
 example, GMM: `python test.py --name GMM --stage GMM --workers 4 --datamode test --data_list test_pairs.txt --checkpoint checkpoints/GMM/gmm_final.pth`
 
@@ -53,14 +53,14 @@ Then run `test.py` for GMM network with the testing dataset, which will generate
 example TOM: `python test.py --name TOM --stage TOM --workers 4 --datamode test --data_list test_pairs.txt --checkpoint checkpoints/TOM/tom_final.pth`
 
 
-### Pre-trained Models and datasets
+## Pre-trained Models and datasets
 
 download pre-trained models and dataset. \
 Create checkpoints folder and copy the pre-trained models to checkpoints/ . [Checkpoints](https://1drv.ms/u/s!Ai8t8GAHdzVUiQA-o3C7cnrfGN6O?e=EaRiFP)\
 Create data folder copy the datasets to data/ folder. [VITON_PLUS](https://1drv.ms/u/s!Ai8t8GAHdzVUiQQYX0azYhqIDPP6?e=4cpFTI)
 
 
-### Testing with custom images
+## Testing with custom images
 
 you can refer my other repo for this, https://github.com/ARajgor/VTryon-flask-new <br>
 it is based on Flask App for custom images. A big thanks to @vinodbukya6 (https://github.com/vinodbukya6/cp-VTryon-plus-Flask-App) to make flask based application. I  fixed the minor bugs and upgrade to new version.
