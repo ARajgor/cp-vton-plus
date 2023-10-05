@@ -33,9 +33,9 @@ if you find any problem feel free to raise issue.
 
 
 ## Installation and Run
-For torch cuda installation refer [torch](https://pytorch.org/get-started/locally/)
+First install torch with cuda. refer [torch](https://pytorch.org/get-started/locally/)
 
-run `pip install -r requirements.txt`
+then, run `pip install -r requirements.txt`
 
 ### AutoRun
 Run `python app.py`
