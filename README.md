@@ -1,37 +1,59 @@
-# CP-VTON+ (Only CPU)
+# CP-VTON+ (CPU) (new 2023)
 
-## Original Author
-credits to original author. A very exceptional work. here the details.<br>
-visit original repo : https://github.com/minar09/cp-vton-plus <br><br> 
-Official implementation for "CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On" from CVPRW 2020.
-<br/>Project page: https://minar09.github.io/cpvtonplus/. 
+### Original Author
+```
+@InProceedings{Minar_CPP_2020_CVPR_Workshops,
+	title={CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On},
+	author={Minar, Matiur Rahman and Thai Thanh Tuan and Ahn, Heejune and Rosin, Paul and Lai, Yu-Kun},
+	booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+	month = {June},
+	year = {2020}
+}
+```
+
+<br/>Project [page](https://minar09.github.io/cpvtonplus/)
 <br/>Saved/Pre-trained models: [Checkpoints](https://1drv.ms/u/s!Ai8t8GAHdzVUiQA-o3C7cnrfGN6O?e=EaRiFP)
 <br/>Dataset: [VITON_PLUS](https://1drv.ms/u/s!Ai8t8GAHdzVUiQQYX0azYhqIDPP6?e=4cpFTI)
 
-## what's new 
-- **run on CPU**. revise the code from cuda to cpu.
-- I upgrade the project to new version of libraries.
-- code is tested on the new version of torch=1.13.1, torchvision=0.14.1 using with python 3.9 pip installation.
-- run only one file app.py for testing. it can automatically run both commands (GMM and TOM) and take care of copying files. (if you want to train first then change the test.py to train.py on line no. 6 and 14.)
+## what's new [Oct 2023]
+- Python 3.11 support.
+  - torch=2.0.1
+  - torchvision=0.15.2
+  - opencv = 4.8.1.78
+- CPU support only (slower than GPU)
+  - no need to install cuda and cudnn
+- Run `app.py` for testing or training. 
+- it can automatically run both commands (GMM and TOM) and take care of copying files. 
+- For training / testing 
+  - `subprocess.call(gmm_train/gmm_test, shell=True)`
+  - `subprocess.call(tom_train/tom_test, shell=True)`
 - fix all the deprecated warning of torch and resolve all isuses regarding dependency.
 - have a dedicated branch for only-cpu version.
 
 if you find any problem feel free to raise issue.
 
-### Pre-trained Models and datasets
 
-download pre-trained models and dataset. copy the pre-trained models to checkpoints/ folder. copy the datasets to data/ folder.
+## Installation and Run
 
-### Installation
 run `pip install -r requirements.txt`
 
-### How to run
-Run `python app.py` it will take care of both the operation GMM and TOM. you can customize as per your requirements. it also has copy functionality of files. if you want to run actual commands refer below steps.
-<br>
-for tensorboard run `tensorboard --logdir tensorboard`
+### AutoRun
+Run `python app.py`
 
-### Testing with custom images
+for tensorboard Run `tensorboard --logdir tensorboard`
 
-you can refer my other repo for this, https://github.com/ARajgor/VTryon-flask-new <br>
-it is based on Flask App for custom images. A big thanks to @vinodbukya6 (https://github.com/vinodbukya6/cp-VTryon-plus-Flask-App) to make flask based application. I  fixed the minor bugs and upgrade to new version.
+### Training
+https://github.com/minar09/cp-vton-plus#training
+### Testing
+https://github.com/minar09/cp-vton-plus#testing
+
+## Pre-trained Models and datasets
+
+Create checkpoints folder and copy the models to checkpoints/ [Checkpoints](https://1drv.ms/u/s!Ai8t8GAHdzVUiQA-o3C7cnrfGN6O?e=EaRiFP)\
+Create data folder copy the datasets to data/ [VITON_PLUS](https://1drv.ms/u/s!Ai8t8GAHdzVUiQQYX0azYhqIDPP6?e=4cpFTI)
+
+
+## Testing with custom images
+
+Refer my other repo for this, [vtryon-app](https://github.com/ARajgor/vtryon-app)
 
