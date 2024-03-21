@@ -33,9 +33,14 @@ if you find any problem feel free to raise issue.
 
 
 ## Installation and Run
-First install torch with cuda. refer [torch](https://pytorch.org/get-started/locally/)
+1) create and virtual env.
+2) if you are running on cpu, then follow this branch. [CPU](https://github.com/ARajgor/cp-vton-plus/tree/cpu)
+3) if you have cuda then install torch with cuda. refer [torch](https://pytorch.org/get-started/locally/)
 
-then, run `pip install -r requirements.txt`
+after that, install the dependencies.
+```bash
+pip install -r requirements.txt
+```
 
 ### AutoRun
 Run `python app.py`
