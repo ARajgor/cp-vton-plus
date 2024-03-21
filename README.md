@@ -1,6 +1,6 @@
 # CP-VTON+ (CPU) (new 2023)
 
-### Original Author
+#### Original Author
 ```
 @InProceedings{Minar_CPP_2020_CVPR_Workshops,
 	title={CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On},
@@ -10,6 +10,7 @@
 	year = {2020}
 }
 ```
+#### this is a CPU version, for cuda version refer to the master branch.
 
 <br/>Project [page](https://minar09.github.io/cpvtonplus/)
 <br/>Saved/Pre-trained models: [Checkpoints](https://1drv.ms/u/s!Ai8t8GAHdzVUiQA-o3C7cnrfGN6O?e=EaRiFP)
@@ -34,8 +35,12 @@ if you find any problem feel free to raise issue.
 
 
 ## Installation and Run
+create and virtual env.
 
-run `pip install -r requirements.txt`
+after that, install the dependencies.
+```bash
+pip install -r requirements.txt
+```
 
 ### AutoRun
 Run `python app.py`
